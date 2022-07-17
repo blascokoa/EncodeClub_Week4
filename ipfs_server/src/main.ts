@@ -5,13 +5,15 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
   const swaggerOptions = new DocumentBuilder()
-    .setTitle('Lesson 16 Project')
+    .setTitle('Project week 4')
     .setVersion('1.0.0')
-    .setDescription('Encode Club Bootcamp June Project for Lesson 16')
+    .setDescription(
+      'Backend for the project of the week 4 from EncodeClub Bootcamp',
+    )
     .build();
   const document = SwaggerModule.createDocument(app, swaggerOptions);
   SwaggerModule.setup('docs', app, document);
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 5000;
   await app.listen(port);
 }
 bootstrap();

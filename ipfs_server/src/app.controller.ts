@@ -210,6 +210,7 @@ export class AppController {
       file.filename,
       file.size,
     );
+
     const savedObj = this.appService.pushFile(fileData);
     return savedObj;
   }

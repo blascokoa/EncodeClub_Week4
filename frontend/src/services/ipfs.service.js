@@ -7,3 +7,8 @@ const service = axios.create({
 export const getMetadataInfoService = (id) => {
   return service.get(`/metadata/${id}`);
 };
+
+export const uploadFileService = (file) => {
+  console.log(file);
+  return service.post("/file", file);
+};

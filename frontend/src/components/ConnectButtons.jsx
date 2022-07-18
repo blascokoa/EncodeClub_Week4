@@ -51,16 +51,18 @@ const ConnectButtons = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "row", m: 2 }}>
-      <Button
-        onClick={connectHandler}
-        // disabled={shouldDisable}
-        variant={"contained"}
-        color={"success"}
-        sx={{ width: "200px", mr: 2 }}
-      >
-        Connect Metamask
-      </Button>
+    <Box>
+      <Box sx={{ display: "flex", flexDirection: "row", m: 2 }}>
+        <Button
+          onClick={connectHandler}
+          // disabled={shouldDisable}
+          variant={"contained"}
+          color={"success"}
+          sx={{ width: "200px", mr: 2 }}
+        >
+          Connect Metamask
+        </Button>
+      </Box>
       <Box
         sx={{
           display: "flex",
@@ -69,7 +71,7 @@ const ConnectButtons = () => {
           m: 2,
         }}
       >
-        <Typography>Connected to: {account}</Typography>
+        <Typography>Connected to account: {account}</Typography>
         <Typography>
           Using Network: {parseInt(window.ethereum.chainId, 16)}
         </Typography>

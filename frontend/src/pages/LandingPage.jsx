@@ -1,8 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import MetaDataSearcher from "../components/MetaData";
 import ConnectButtons from "../components/ConnectButtons";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -11,10 +14,11 @@ const LandingPage = () => {
         alignItems: "center",
       }}
     >
-      <Box>
-        <Typography variant={"h2"}>Week 4 - EncodeClub Bootcamp</Typography>
-      </Box>
       <ConnectButtons />
+
+      {/*<Button onClick={(e) => navigate("/ipfs_upload")}>*/}
+      {/*  Go to IPFS Uploader*/}
+      {/*</Button>*/}
       {/*<MetaDataSearcher />*/}
     </Box>
   );
